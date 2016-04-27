@@ -33,6 +33,8 @@ def index():
         
 def changeStat():
         global value
+        global res
+        res = os.popen('vcgencmd measure_temp').readline()
         print("test")
         if (value):
                 value = False
